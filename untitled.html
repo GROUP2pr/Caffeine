@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffeine Consumption Survey</title>
+</head>
+<body>
+    <h1>Hi! Can I ask for a favor?</h1>
+    <p>Please answer (yes or no) for each question:</p>
+    <form action="/submit_survey" method="post" onsubmit="return confirmSubmit()">
+        <label for="caffeine_consumption">1. Do you consume caffeinated goods/products at least once a week?</label><br>
+        <input type="radio" id="caffeine_yes" name="caffeine_consumption" value="yes">
+        <label for="caffeine_yes">Yes</label><br>
+        <input type="radio" id="caffeine_no" name="caffeine_consumption" value="no">
+        <label for="caffeine_no">No</label><br><br>
+
+        <label for="additional_consumption">2. Do you consume other caffeinated products outside of coffee shops?</label><br>
+        <input type="radio" id="additional_yes" name="additional_consumption" value="yes">
+        <label for="additional_yes">Yes</label><br>
+        <input type="radio" id="additional_no" name="additional_consumption" value="no">
+        <label for="additional_no">No</label><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <p><em>Ps. This post/chat is academic related so please be serious with your answers. Thank you!</em></p>
+
+    <script>
+        function confirmSubmit() {
+            return confirm("Thank you for answering our survey!");
+        }
+    </script>
+</body>
+</html>
